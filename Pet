@@ -1,0 +1,28 @@
+import java.util.*;
+
+
+class Solution {
+
+    public static void main(String[] args) {
+        int max = 0;
+        int win = 0;
+        int lineSum = 0;
+        Scanner scan = new Scanner(System.in);
+
+        for (int i = 0; i < 5; i++) {
+            String temp = scan.nextLine();
+            String[] numbersStr = temp.split(" ");
+            int[] numbers = new int[4];
+            for (int j = 0; j < 4; j++) {
+                numbers[j] = Integer.parseInt(numbersStr[j]);
+                lineSum += numbers[j];
+            }
+            if (lineSum > max) {
+                max = lineSum;
+                win = i+1;
+            }
+            lineSum=0;
+        }
+        System.out.println(win + "," + max);
+    }
+}
