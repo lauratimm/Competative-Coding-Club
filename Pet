@@ -23,6 +23,6 @@ class Solution {
             }
             lineSum=0;
         }
-        System.out.println(win + "," + max);
+        System.out.println(win + " " + max);
     }
 }
